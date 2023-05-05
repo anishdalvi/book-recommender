@@ -14,6 +14,6 @@ This is the **Book Reommender** Web App developed using Python (Flask)
 
 ## To run this application
 
-`python manage.py runserver` 
+`python app.py` 
 
 *I have made this by watching this [Youtube Video](https://youtu.be/1YoD0fg3_EM)*
