@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Recommender System</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<style>
+    .text-white{
+        color:white
+    }
+    .test{
+        background-color: white;
+    }
+
+    a {
+        color: rgb(15, 183, 255);
+        text-decoration: none;
+    }
+
+    .navbar {
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar-brand:hover{
+        color: rgb(15, 183, 255);
+        cursor: pointer;
+    }
+    hr.new1{
+        border-top: 1px dashed rgb(255, 255, 255);
+        opacity: 0.4;
+    }
+
+    .each{
+        margin: 40px 0;
+    }
+    
+</style>
+<body style="background-color:black">
+
+    <nav class="navbar" style="background-color:#000000">
+        <a class="navbar-brand">My Book recommender</a>
+        <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/recommend">Recommend</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div >
+                <h1 class="text-white" style="font-size:50px">Recommend Books</h1>
+                <hr>
+                <div style="padding: 20px;"></div>
+                <form action="/recommend_books" method="post">
+                    <input name="user_input" type="text" class="form-control"><br>
+                    <input type="submit" class="btn btn-lg btn-primary">
+                </form>
+            </div>
+            <div class="new">
+                {% if data %}
+
+                {% for i in data %}
+                    <div class="container">
+                        <div class="row each">
+                            <div class="col-md-12">
+                                <div class="col-md-2">
+                                    <img class="card-img-top" src="{{i[2]}}">
+                                </div>
+                                <div class="col-md-10">
+                                    <h3 class="text-white">{{ i[0] }}</h3>
+                                    <hr class="new1" style="margin:0;" width="700px" color="red">
+        
+                                    <h4 class="text-white" >{{ i[1] }}</h4>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                {% endfor %}
+
+                {% endif %}
+            </div>
+
+            
+
+        </div>
+    </div>
+
+</body>
+</html>
