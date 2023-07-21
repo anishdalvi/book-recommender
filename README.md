@@ -6,6 +6,13 @@ This is the **Book Reommender** Web App developed using Python (Flask)
 
 *The user has to search for a book on the basis of which he will get recommendations on it*
 
+## Demo Images
+
+![Demo Image 1](<demo_images/Project_Book Recommender Image 1.png>)
+
+![Demo Image 2](<demo_images/Project_Book Recommender Image 2.png>)
+
+
 ## Before Running  this application
 
 *make sure your python_version >= "3.8"*
